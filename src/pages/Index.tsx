@@ -5,10 +5,11 @@ import TechStackSection from "@/components/TechStackSection";
 import PortfolioSection from "@/components/PortfolioSection";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const Index = () => {
   return (
-    <>
+    <LanguageProvider>
       <Helmet>
         <title>John Doe | Backend Developer</title>
         <meta
@@ -32,7 +33,7 @@ const Index = () => {
         </main>
         <Footer />
       </div>
-    </>
+    </LanguageProvider>
   );
 };
 
