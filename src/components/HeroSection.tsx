@@ -34,7 +34,7 @@ const HeroSection = () => {
 
           {/* Name & Title */}
           <h1 className="opacity-0 animate-fade-up stagger-1 text-4xl md:text-5xl lg:text-6xl font-heading font-semibold text-foreground mb-4">
-            John Doe
+            Santiago Pérez
           </h1>
 
           <p className="opacity-0 animate-fade-up stagger-2 text-xl md:text-2xl text-primary font-medium mb-6 text-glow">

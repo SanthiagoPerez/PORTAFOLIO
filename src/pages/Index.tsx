@@ -11,7 +11,7 @@ const Index = () => {
   return (
     <LanguageProvider>
       <Helmet>
-        <title>John Doe | Backend Developer</title>
+        <title>S_P | Backend Developer</title>
         <meta
           name="description"
           content="Backend Developer specializing in scalable server-side solutions, RESTful APIs, and microservices architecture. View my portfolio and get in touch."
