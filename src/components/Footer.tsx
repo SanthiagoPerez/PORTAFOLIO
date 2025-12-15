@@ -1,4 +1,5 @@
 import { Linkedin, Github, Mail } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const socialLinks = [
   {
@@ -19,8 +20,10 @@ const socialLinks = [
 ];
 
 const Footer = () => {
+  const { t } = useLanguage();
+
   return (
-    <footer className="py-16 bg-secondary/30 border-t border-border/50">
+    <footer className="py-16 bg-secondary/20 border-t border-border/30">
       <div className="section-container">
         <div className="flex flex-col items-center">
           {/* Logo */}
@@ -53,7 +56,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} John Doe. All rights reserved.
+            © {new Date().getFullYear()} John Doe. {t.footer.rights}
           </p>
         </div>
       </div>

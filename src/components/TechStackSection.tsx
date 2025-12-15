@@ -6,6 +6,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const technologies = [
   { name: "Node.js", icon: "🟢" },
@@ -23,13 +24,15 @@ const technologies = [
 ];
 
 const TechStackSection = () => {
+  const { t } = useLanguage();
+
   return (
-    <section id="stack" className="py-24 md:py-32 bg-secondary/30">
+    <section id="stack" className="py-24 md:py-32 bg-secondary/20">
       <div className="section-container">
         <div className="text-center mb-16">
-          <h2 className="section-title">Tech Stack</h2>
+          <h2 className="section-title">{t.stack.title}</h2>
           <p className="section-subtitle mx-auto">
-            Technologies I work with to build robust backend systems
+            {t.stack.subtitle}
           </p>
         </div>
 
@@ -62,8 +65,8 @@ const TechStackSection = () => {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-12" />
-            <CarouselNext className="hidden md:flex -right-12" />
+            <CarouselPrevious className="hidden md:flex -left-12 bg-card border-border hover:bg-secondary hover:border-primary/30" />
+            <CarouselNext className="hidden md:flex -right-12 bg-card border-border hover:bg-secondary hover:border-primary/30" />
           </Carousel>
         </div>
 
