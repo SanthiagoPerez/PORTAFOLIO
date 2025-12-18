@@ -40,18 +40,28 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="flex items-center gap-4 mb-8">
-            {socialLinks.map((social) => (
-              <a
-                key={social.name}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="social-icon"
-                aria-label={social.name}
-              >
-                <social.icon size={20} />
-              </a>
-            ))}
+            {socialLinks.map((social) => {
+              const isEmail = social.name === "Email";
+              const defaultSubject = "Contacto desde Tektōn.dev";
+
+              const gmailCompose = (address: string, subject: string) =>
+                `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(address)}&su=${encodeURIComponent(subject)}`;
+
+              const href = isEmail ? gmailCompose(social.url, defaultSubject) : social.url;
+
+              return (
+                <a
+                  key={social.name}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="social-icon"
+                  aria-label={social.name}
+                >
+                  <social.icon size={20} />
+                </a>
+              );
+            })}
           </div>
 
           {/* Copyright */}
