@@ -18,7 +18,7 @@ const Index = () => {
         />
         <meta
           name="keywords"
-          content="Backend Developer, Node.js, Python, PostgreSQL, API Development, Microservices"
+          content="Backend Developer, Java, Python, PostgreSQL, API Development, Microservices"
         />
         <link rel="canonical" href="https://yoursite.com" />
       </Helmet>
