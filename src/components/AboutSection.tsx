@@ -68,12 +68,12 @@ const AboutSection = () => {
 
             <Dialog> 
               <DialogTrigger asChild>
-                <Button variant="default">CV</Button>
+                <Button variant="default">CV ATS</Button>
               </DialogTrigger>
 
               <DialogContent>
                 <DialogHeader>
-                  <DialogTitle>Currículum (CV)</DialogTitle>
+                  <DialogTitle>Currículum (CV-ATS)</DialogTitle>
                 </DialogHeader>
 
                 <div className="w-full h-[72vh] mt-4">
