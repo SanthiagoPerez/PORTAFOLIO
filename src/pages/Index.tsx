@@ -11,14 +11,14 @@ const Index = () => {
   return (
     <LanguageProvider>
       <Helmet>
-        <title>dev.</title>
+        <title>Tektōn.dev</title>
         <meta
           name="description"
-          content="Backend Developer specializing in scalable server-side solutions, RESTful APIs, and microservices architecture. View my portfolio and get in touch."
+          content="Backend Junior Developer specializing in scalable server-side solutions, RESTful APIs, and microservices architecture. View my portfolio and get in touch."
         />
         <meta
           name="keywords"
-          content="Backend Developer, Java, Python, PostgreSQL, API Development, Microservices"
+          content="Backend Junior Developer, Java, Python, PostgreSQL, API Development, Microservices"
         />
         <link rel="canonical" href="https://yoursite.com" />
       </Helmet>

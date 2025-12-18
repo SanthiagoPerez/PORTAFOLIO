@@ -51,13 +51,13 @@ const translations: Record<Language, Translations> = {
       portfolio: "Portfolio",
     },
     hero: {
-      role: "Backend Developer",
+      role: "Backend Junior Developer",
       tagline: "Building robust, scalable server-side solutions. Passionate about clean code and system architecture.",
       learnMore: "Learn more",
     },
     about: {
       title: "About Me",
-      paragraph1: "I'm a dedicated Backend Developer with a passion for crafting efficient, scalable, and maintainable server-side applications. With expertise in designing RESTful APIs, managing databases, and building microservices architectures, I turn complex business requirements into elegant technical solutions.",
+      paragraph1: "I'm a dedicated Backend Junior Developer with a passion for crafting efficient, scalable, and maintainable server-side applications. With expertise in designing RESTful APIs, managing databases, and building microservices architectures, I turn complex business requirements into elegant technical solutions.",
       paragraph2: "My approach to development centers on clean code principles and thoughtful system design. I believe that robust backend infrastructure is the foundation of any successful application, and I take pride in building systems that are not just functional, but also performant and secure.",
       paragraph3: "When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, and sharing knowledge with the developer community. I'm always eager to take on challenging projects that push the boundaries of what's possible.",
       yearsExp: "Years Experience",
@@ -112,13 +112,13 @@ const translations: Record<Language, Translations> = {
       portfolio: "Portafolio",
     },
     hero: {
-      role: "Desarrollador Backend",
+      role: "Desarrollador Backend Junior",
       tagline: "Construyendo soluciones robustas y escalables del lado del servidor. Apasionado por el código limpio y la arquitectura de sistemas.",
       learnMore: "Saber más",
     },
     about: {
       title: "Sobre Mí",
-      paragraph1: "Soy un Desarrollador Backend dedicado con pasión por crear aplicaciones del lado del servidor eficientes, escalables y mantenibles. Con experiencia en diseño de APIs RESTful, gestión de bases de datos y construcción de arquitecturas de microservicios, transformo requisitos de negocio complejos en soluciones técnicas elegantes.",
+      paragraph1: "Soy un Desarrollador Backend Junior dedicado con pasión por crear aplicaciones del lado del servidor eficientes, escalables y mantenibles. Con experiencia en diseño de APIs RESTful, gestión de bases de datos y construcción de arquitecturas de microservicios, transformo requisitos de negocio complejos en soluciones técnicas elegantes.",
       paragraph2: "Mi enfoque de desarrollo se centra en los principios de código limpio y diseño de sistemas reflexivo. Creo que una infraestructura backend robusta es la base de cualquier aplicación exitosa, y me enorgullezco de construir sistemas que no solo sean funcionales, sino también eficientes y seguros.",
       paragraph3: "Cuando no estoy programando, disfruto explorando nuevas tecnologías, contribuyendo a proyectos de código abierto y compartiendo conocimiento con la comunidad de desarrolladores. Siempre estoy dispuesto a asumir proyectos desafiantes que amplíen los límites de lo posible.",
       yearsExp: "Años de Experiencia",
