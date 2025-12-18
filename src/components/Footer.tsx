@@ -35,7 +35,7 @@ const Footer = () => {
             }}
             className="font-heading font-semibold text-2xl text-foreground mb-6"
           >
-            dev<span className="text-primary">.</span>
+            Tektōn<span className="text-primary">.</span>dev
           </a>
 
           {/* Social Links */}

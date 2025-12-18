@@ -60,10 +60,10 @@ const TechStackSection = () => {
               {technologies.map((tech) => (
                 <CarouselItem
                   key={tech.name}
-                  className="px-4 md:px-6 basis-1/2 md:basis-1/3 lg:basis-1/4"
+                  className="w-[16rem] md:w-[20rem] flex-none px-4 md:px-6"
                 >
-                  <div className="tech-badge flex-col h-full">
-                    <img src={tech.src} alt={tech.name} className="mx-auto h-20 md:h-28 mb-4 object-contain" />
+                  <div className="tech-badge flex-col justify-center h-[14rem] md:h-[18rem]">
+                    <img src={tech.src} alt={tech.name} className="mx-auto max-h-28 md:max-h-36 mb-4 object-contain" />
                     <span className="text-sm font-medium text-foreground">
                       {tech.name}
                     </span>

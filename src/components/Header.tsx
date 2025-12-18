@@ -48,7 +48,7 @@ const Header = () => {
             }}
             className="font-heading font-semibold text-xl text-foreground"
           >
-            dev<span className="text-primary">.</span>
+            Tektōn<span className="text-primary">.</span>dev
           </a>
 
           {/* Desktop Navigation */}

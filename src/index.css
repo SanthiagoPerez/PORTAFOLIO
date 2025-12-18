@@ -136,13 +136,24 @@
   }
 
   .tech-badge {
-    @apply inline-flex items-center gap-2 px-6 py-4 bg-card rounded-xl border border-border/50 transition-all duration-200 hover:border-primary/60 hover:bg-primary/10 hover:text-foreground;
+    @apply flex flex-col items-center justify-center gap-2 px-6 pt-8 pb-8 md:pt-10 md:pb-10 bg-card rounded-xl border border-border/50 transition-all duration-200;
     box-shadow: var(--shadow-sm);
+    min-height: 9rem;
+    width: 100%;
+  }
+
+  .tech-badge img {
+    max-height: 6.5rem;
+    width: auto;
   }
 
   .tech-badge:hover {
     box-shadow: var(--shadow-glow);
-    @apply transform scale-105;
+    transform: translateY(-6px) scale(1.06);
+    /* Use a stronger primary background to match the cyan in your screenshot */
+    background-color: hsl(var(--primary) / 0.24);
+    border-color: hsl(var(--primary) / 0.6);
+    color: hsl(var(--primary-foreground));
   }
 
   .social-icon {
