@@ -8,19 +8,25 @@ import {
 import Autoplay from "embla-carousel-autoplay";
 import { useLanguage } from "@/contexts/LanguageContext";
 
+// Images from src/img
+import swaggerImg from "@/img/swagger.png";
+import sqlImg from "@/img/SQL.png";
+import springImg from "@/img/SpringBoot.png";
+import mavenImg from "@/img/maven.png";
+import javaImg from "@/img/java.webp";
+import hibernateImg from "@/img/Hibernate.png";
+import githubImg from "@/img/GitHub.png";
+import gitImg from "@/img/Git-Logo.png";
+
 const technologies = [
-  { name: "Node.js", icon: "🟢" },
-  { name: "Python", icon: "🐍" },
-  { name: "PostgreSQL", icon: "🐘" },
-  { name: "MongoDB", icon: "🍃" },
-  { name: "Redis", icon: "🔴" },
-  { name: "Docker", icon: "🐳" },
-  { name: "Kubernetes", icon: "☸️" },
-  { name: "AWS", icon: "☁️" },
-  { name: "GraphQL", icon: "◈" },
-  { name: "Go", icon: "🔵" },
-  { name: "TypeScript", icon: "📘" },
-  { name: "Rust", icon: "🦀" },
+  { name: "Swagger", src: swaggerImg },
+  { name: "SQL", src: sqlImg },
+  { name: "Spring Boot", src: springImg },
+  { name: "Maven", src: mavenImg },
+  { name: "Java", src: javaImg },
+  { name: "Hibernate", src: hibernateImg },
+  { name: "GitHub", src: githubImg },
+  { name: "Git", src: gitImg },
 ];
 
 const TechStackSection = () => {
@@ -50,20 +56,20 @@ const TechStackSection = () => {
             ]}
             className="w-full"
           >
-            <CarouselContent className="-ml-2 md:-ml-4">
+            <CarouselContent className="px-4 md:px-6">
               {technologies.map((tech) => (
                 <CarouselItem
                   key={tech.name}
-                  className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4"
+                  className="px-4 md:px-6 basis-1/2 md:basis-1/3 lg:basis-1/4"
                 >
                   <div className="tech-badge flex-col h-full">
-                    <span className="text-3xl mb-2">{tech.icon}</span>
+                    <img src={tech.src} alt={tech.name} className="mx-auto h-20 md:h-28 mb-4 object-contain" />
                     <span className="text-sm font-medium text-foreground">
                       {tech.name}
                     </span>
                   </div>
                 </CarouselItem>
-              ))}
+              ))} 
             </CarouselContent>
             <CarouselPrevious className="hidden md:flex -left-12 bg-card border-border hover:bg-secondary hover:border-primary/30" />
             <CarouselNext className="hidden md:flex -right-12 bg-card border-border hover:bg-secondary hover:border-primary/30" />
@@ -73,8 +79,8 @@ const TechStackSection = () => {
         {/* Static grid for mobile fallback */}
         <div className="md:hidden mt-8 grid grid-cols-3 gap-3">
           {technologies.slice(0, 6).map((tech) => (
-            <div key={tech.name} className="tech-badge flex-col text-center">
-              <span className="text-2xl mb-1">{tech.icon}</span>
+            <div key={tech.name} className="tech-badge flex-col text-center px-4 py-3">
+              <img src={tech.src} alt={tech.name} className="mx-auto h-16 mb-2 object-contain" />
               <span className="text-xs font-medium text-foreground">
                 {tech.name}
               </span>

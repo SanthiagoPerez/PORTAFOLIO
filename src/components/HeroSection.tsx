@@ -26,7 +26,7 @@ const HeroSection = () => {
             <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-primary/30 to-primary/5 p-1 mb-8 shadow-lg" style={{ boxShadow: 'var(--shadow-glow)' }}>
               <div className="w-full h-full rounded-full bg-card flex items-center justify-center overflow-hidden border border-border/50">
                 <span className="text-4xl md:text-5xl font-heading font-semibold text-primary text-glow">
-                  JD
+                  SP
                 </span>
               </div>
             </div>

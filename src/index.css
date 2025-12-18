@@ -136,12 +136,13 @@
   }
 
   .tech-badge {
-    @apply inline-flex items-center gap-2 px-4 py-3 bg-card rounded-xl border border-border/50 transition-all duration-200 hover:border-primary/40 hover:bg-secondary;
+    @apply inline-flex items-center gap-2 px-6 py-4 bg-card rounded-xl border border-border/50 transition-all duration-200 hover:border-primary/60 hover:bg-primary/10 hover:text-foreground;
     box-shadow: var(--shadow-sm);
   }
 
   .tech-badge:hover {
     box-shadow: var(--shadow-glow);
+    @apply transform scale-105;
   }
 
   .social-icon {

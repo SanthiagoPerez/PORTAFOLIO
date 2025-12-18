@@ -5,17 +5,17 @@ const socialLinks = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    url: "https://linkedin.com/in/yourprofile",
+    url: "https://www.linkedin.com/in/santiago-perez-/",
   },
   {
     name: "GitHub",
     icon: Github,
-    url: "https://github.com/yourprofile",
+    url: "https://github.com/SanthiagoPerez",
   },
   {
     name: "Email",
     icon: Mail,
-    url: "mailto:your.email@example.com",
+    url: "sperez.pino07@gmail.com",
   },
 ];
 
