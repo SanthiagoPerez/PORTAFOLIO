@@ -1,7 +1,40 @@
+import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
 
 const AboutSection = () => {
   const { t } = useLanguage();
+
+  const [cvUrl, setCvUrl] = useState<string | null>(null);
+  const cvName = "CV_SANTIAGO.pdf";
+
+  useEffect(() => {
+    // Si existe public/cv.pdf lo usamos como valor por defecto
+    fetch("/cv.pdf", { method: "HEAD" })
+      .then((res) => { if (res.ok) setCvUrl("/CV_SANTIAGO.pdf"); })
+      .catch(() => {});
+
+    return () => {
+      // liberar URL de blob si se creó
+      if (cvUrl && cvUrl.startsWith("blob:")) {
+        URL.revokeObjectURL(cvUrl);
+      }
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+
+
+
 
   return (
     <section id="about" className="py-24 md:py-32">
@@ -31,20 +64,43 @@ const AboutSection = () => {
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-3 gap-4 md:gap-6 text-center">
-            <div className="p-4 md:p-6 rounded-xl bg-card border border-border/50 transition-all duration-300 hover:border-primary/30" style={{ boxShadow: 'var(--shadow-card)' }}>
-              <p className="text-2xl md:text-4xl font-heading font-semibold text-primary mb-2 text-glow">5+</p>
-              <p className="text-xs md:text-sm text-muted-foreground">{t.about.yearsExp}</p>
-            </div>
-            <div className="p-4 md:p-6 rounded-xl bg-card border border-border/50 transition-all duration-300 hover:border-primary/30" style={{ boxShadow: 'var(--shadow-card)' }}>
-              <p className="text-2xl md:text-4xl font-heading font-semibold text-primary mb-2 text-glow">50+</p>
-              <p className="text-xs md:text-sm text-muted-foreground">{t.about.projects}</p>
-            </div>
-            <div className="p-4 md:p-6 rounded-xl bg-card border border-border/50 transition-all duration-300 hover:border-primary/30" style={{ boxShadow: 'var(--shadow-card)' }}>
-              <p className="text-2xl md:text-4xl font-heading font-semibold text-primary mb-2 text-glow">20+</p>
-              <p className="text-xs md:text-sm text-muted-foreground">{t.about.clients}</p>
-            </div>
+          <div className="mt-8 flex items-center justify-center gap-3">
+
+            <Dialog> 
+              <DialogTrigger asChild>
+                <Button variant="default">CV</Button>
+              </DialogTrigger>
+
+              <DialogContent>
+                <DialogHeader>
+                  <DialogTitle>Currículum (CV)</DialogTitle>
+                </DialogHeader>
+
+                <div className="w-full h-[72vh] mt-4">
+                  {cvUrl ? (
+                    <iframe src={cvUrl} title="CV" className="w-full h-full rounded" />
+                  ) : (
+                    <div className="flex h-full items-center justify-center">
+                      <p className="text-muted-foreground">No hay CV disponible. Puedes subir uno.</p>
+                    </div>
+                  )}
+                </div>
+
+                <DialogFooter>
+                  <div className="flex gap-2">
+                    <Button variant="outline" asChild>
+                      <a href={cvUrl ?? undefined} target="_blank" rel="noreferrer" onClick={(e) => { if (!cvUrl) e.preventDefault(); }}>Abrir en nueva pestaña</a>
+                    </Button>
+
+                    <Button variant="secondary" className="hover:bg-accent hover:text-accent-foreground" asChild>
+                      <a href={cvUrl ?? undefined} download={cvName} onClick={(e) => { if (!cvUrl) e.preventDefault(); }}>Descargar</a>
+                    </Button>
+                  </div>
+                </DialogFooter>
+              </DialogContent>
+            </Dialog>
           </div>
+
         </div>
       </div>
     </section>
